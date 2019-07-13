@@ -7,4 +7,4 @@ Number|Problem Name|Solution|Level|Brief Description
 152|Maximum Product Subarray|TBA|TBA|DP
 62|Unique Path|TBA|TBA|DP
 55|Jump Game|[sol_55](/src/sol_55.java)|Medium|DP, Greedy*, Backtracing
-42|Trapping Rain Water|TBA|Hard|DP, two pointers, stacks
+42|Trapping Rain Water|[sol_42](/src/sol_42.java)|Hard|DP, two pointers, stacks
