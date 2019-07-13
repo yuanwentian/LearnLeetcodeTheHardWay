@@ -6,5 +6,5 @@ Number|Problem Name|Solution|Level|Brief Description
 322|Coin Change|TBA|TBA|DP
 152|Maximum Product Subarray|TBA|TBA|DP
 62|Unique Path|TBA|TBA|DP
-55|Jump Game|[sol_55](/src/sol_55.java)|TBA|DP, Greedy*, Backtracing
+55|Jump Game|[sol_55](/src/sol_55.java)|Medium|DP, Greedy*, Backtracing
 42|Trapping Rain Water|TBA|Hard|DP, two pointers, stacks
