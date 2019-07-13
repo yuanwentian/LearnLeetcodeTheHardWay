@@ -1,0 +1,21 @@
+public class sol_55 {
+    // dynamic programming Bottom-up
+    public static boolean canJump_dp(int[] nums) {
+        boolean[] reach = new boolean[nums.length];
+        reach[0] = true;
+        for (int i = 1; i < nums.length; i++) {
+            reach[i] = false;
+            for (int j = i - 1; j >= 0; j--) {
+                if ((reach[j] == true) && (nums[j] >= (i - j))) {
+                    reach[i] = true;
+                }
+            }
+        }
+        return reach[nums.length - 1];
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {0, 2, 3};
+        canJump_dp(nums);
+    }
+}
