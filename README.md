@@ -2,10 +2,10 @@
 Hi there, you are listening to channel 404: "Learn Leetcode The Hard Way".
 
 
-need to practive memoization
+need to practive memoization;
 
 Number|Problem Name|Solution|Level|Brief Description|Time Complexity|Space Complexity
---|--|--|--|--|--|
+--|--|--|--|--|--|--|
 509|Fibonacci Number|[sol_509](/src/sol_509.java)|Easy|DP|TBA|TBA|
 322|Coin Change|[sol_322](/src/sol_322.java)|Medium|DP|TBA|TBA|
 152|Maximum Product Subarray|TBA|TBA|DP|TBA|TBA|
