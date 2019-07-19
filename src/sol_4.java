@@ -22,61 +22,43 @@ public class sol_4 {
             return getkth(A, aStart,       B, bStart + k/2, k - k/2);// Check: bRight + aLeft
     }
     //second code
-    class Solution {
-        public double findMedianSortedArrays_second(int[] nums1, int[] nums2) {
-            double median = 0;
-            int len1 = nums1.length; int len2 = nums2.length;
-            double leftMax, rightMin;
-            //swap nums1 and nums2 if len1 > len2
-            if (len1 > len2) {
-                int[] temp = nums1;
-                nums1 = nums2;
-                nums2 = temp;
-                len1 = nums1.length;
-                len2 = nums2.length;
-            }
-            //compute median;
-            int start = 0; int end = len1; int half = (len1 + len2 + 1) / 2;
-            int aPart = (start + end) / 2; int bPart = half - aPart;
-            boolean odd = ((len1 + len2) % 2 == 1);
-            while (start <= end) {
-                aPart = (start + end) / 2;
-                bPart = half - aPart;
-                System.out.println("aPart: " + aPart + ", bPart: " + bPart);
-                if (aPart < end && nums1[aPart] < nums2[bPart - 1]) {
-                    start = aPart + 1;
-                    System.out.println("1");
-                } else if (aPart > start && nums1[aPart - 1] > nums2[bPart]) {
-                    end = aPart - 1;
-                    System.out.println("2");
-                } else {
-                    System.out.println("3");
-                    if (aPart == 0) {
-                        leftMax = nums2[bPart - 1];
-                    } else if (bPart == 0) {
-                        leftMax = nums1[aPart - 1];
-                    } else {
-                        leftMax = Math.max(nums1[aPart - 1], nums2[bPart - 1]);
-                    }
-                    // if total length is odd
-                    if (odd) {
-                        median = leftMax;
-                        return median;
-                    } else {
-                        if (aPart == len1) {
-                            rightMin = nums2[bPart];
-                        } else if (bPart == len2) {
-                            rightMin = nums1[aPart];
-                        } else {
-                            rightMin = Math.min(nums1[aPart], nums2[bPart]);
-                        }
-                        median = (leftMax + rightMin) / 2;
-                        return median;
-                    }
+    public double findMedianSortedArrays_second(int[] nums1, int[] nums2) {
+        int len1 = nums1.length; int len2 = nums2.length;
+        int leftMax, rightMin;
+        //swap nums1 and nums2 if len1 > len2
+        if (len1 > len2) {
+            int[] temp = nums1;
+            nums1 = nums2;
+            nums2 = temp;
+            len1 = nums1.length;
+            len2 = nums2.length;
+        }
+        //compute median;
+        int start = 0; int end = len1; int half = (len1 + len2 + 1) / 2;
+        boolean odd = ((len1 + len2) % 2 == 1);
+        while (start <= end) {
+            int aPart = (start + end) / 2;
+            int bPart = half - aPart;
+            // System.out.println("aPart: " + aPart + ", bPart: " + bPart);
+            if (aPart < end && nums1[aPart] < nums2[bPart - 1]) {
+                start = aPart + 1; //aPart is too small
+            } else if (aPart > start && nums1[aPart - 1] > nums2[bPart]) {
+                end = aPart - 1; //aPart is too big
+            } else { //aPart is perfect
+                if (aPart == 0) { leftMax = nums2[bPart - 1]; }
+                else if (bPart == 0) { leftMax = nums1[aPart - 1]; }
+                else { leftMax = Math.max(nums1[aPart - 1], nums2[bPart - 1]); }
+                // if total length is odd
+                if (odd) { return leftMax; }
+                else {
+                    if (aPart == len1) { rightMin = nums2[bPart]; }
+                    else if (bPart == len2) { rightMin = nums1[aPart]; }
+                    else { rightMin = Math.min(nums1[aPart], nums2[bPart]); }
+                    return (leftMax + rightMin) / 2.0;
                 }
             }
-            return median;
         }
+        return 0.0;
     }
 
     //first code;
