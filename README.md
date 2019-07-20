@@ -6,6 +6,7 @@ need to practive memoization;
 
 Number|Problem Name|Solution|Level|Brief Description|Time Complexity|Space Complexity
 --|--|--|--|--|--|--|
+38|Count and Say|[sol_38](/src/sol_38.java)|Easy|String|TBA|TBA|
 4|Median of Two Sorted Array|[sol_4](/src/sol_4.java)|Hard(a lot of special cases)|Recursive?Pretty Unique|less than *O*(log(m+n))|TBA|
 509|Fibonacci Number|[sol_509](/src/sol_509.java)|Easy|DP|TBA|TBA|
 322|Coin Change|[sol_322](/src/sol_322.java)|Medium|DP|TBA|TBA|
