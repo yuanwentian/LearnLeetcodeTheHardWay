@@ -20,4 +20,5 @@ Number|Problem Name|Solution|Level|Brief Description|Time Complexity|Space Compl
 Number|Problem Name|Solution|Level|Brief Description|Time Complexity|Space Complexity
 --|--|--|--|--|--|--|
 94|Binary Tree Inorder Traversal|[sol_94](/src/sol_94.java)|Medium(Easy)|Tree|O(N)|O(H)|
+101|Symmetric Tree|[sol_101](/src/sol_101.java)|Easy|Tree|O(N)|O(H)(worst case H = N)|
 110|Balanced Binary Tree|[sol_110](/src/sol_110.java)|Easy|Tree|O(N)|O(H)(if Balanced), O(N)(otherwise)|
