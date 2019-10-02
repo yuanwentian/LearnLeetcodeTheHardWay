@@ -15,4 +15,9 @@ Number|Problem Name|Solution|Level|Brief Description|Time Complexity|Space Compl
 62|Unique Path|[sol_62](/src/sol_62.java)|Medium|DP|TBA|TBA|
 55|Jump Game|[sol_55](/src/sol_55.java)|Medium|DP, Greedy*, Backtracing|TBA|TBA|
 42|Trapping Rain Water|[sol_42](/src/sol_42.java)|Hard|DP, two pointers, stacks|TBA|TBA|
-94|Binary Tree Inorder Traversal|[sol_94](/src/sol_94.java)|Hard|Tree|O(N)|O(H)|
+
+
+Number|Problem Name|Solution|Level|Brief Description|Time Complexity|Space Complexity
+--|--|--|--|--|--|--|
+94|Binary Tree Inorder Traversal|[sol_94](/src/sol_94.java)|Medium(Easy)|Tree|O(N)|O(H)|
+110|Balanced Binary Tree|[sol_110](/src/sol_110.java)|Easy|Tree|O(N)|O(H)(if Balanced), O(N)(otherwise)|
